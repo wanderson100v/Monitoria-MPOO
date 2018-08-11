@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<list>
+  <Usuario>
+    <login>wanderson</login>
+    <senha>1234</senha>
+  </Usuario>
+  <Usuario>
+    <login>frederico</login>
+    <senha>12345</senha>
+  </Usuario>
+  <Usuario>
+    <login>Aderbaldo</login>
+    <senha>12</senha>
+  </Usuario>
+</list>
