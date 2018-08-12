@@ -42,7 +42,13 @@ public class Exemplo01 {
 								tela.g.fillRect((j+1)*32,(i+1)*32,32,32);
 								aux++;
 							}
+					try {
+						Thread.sleep(50);
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
 					tela.repaint();
+					
 				}
 			}
 		}).start();
@@ -62,7 +68,6 @@ class Tela extends JFrame{
 				g.drawImage(pinturaBackEnd,0,0,null);
 			}
 		};
-		
 		add(fundo);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setLocationRelativeTo(null);
