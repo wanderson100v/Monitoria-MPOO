@@ -14,7 +14,7 @@ import javax.swing.JPanel;
 public class Exemplo01 {
 	public static void main(String[] args) {
 		Random r = new Random();
-		int size = r.nextInt(5)+5;
+		int size = r.nextInt(12)+12;
 		
 		List<Color> items = new ArrayList<>();
 		
@@ -43,7 +43,7 @@ public class Exemplo01 {
 								aux++;
 							}
 					try {
-						Thread.sleep(50);
+						Thread.sleep(150);
 					} catch (InterruptedException e) {
 						e.printStackTrace();
 					}
