@@ -1,6 +1,7 @@
 package App;
 
 import java.awt.Color;
+import java.util.ArrayList;
 
 public class App {
 	public static void main(String[] args) {
@@ -15,5 +16,24 @@ public class App {
 		animal.falar();
 		animal = new Gato(Color.red,'f',true,false);
 		animal.falar();
+		
+		// arraylist e polimorfismo de objeto
+		ArrayList<Animal> animais = new ArrayList<>();
+		animais.add(cahorro);
+		animais.add(new Bode());
+		animais.add(new Vaca());
+		animais.add(new Bode());
+		animais.add(new Vaca());
+		animais.add(new Bode());
+		animais.add(new Bode());
+		
+		System.out.println("\nMinha fazenda:");
+		for(Animal a : animais) {
+			a.falar();
+		}
+		
+		
+		
+		
 	}
 }

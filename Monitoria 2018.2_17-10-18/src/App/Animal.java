@@ -19,6 +19,8 @@ public class Animal {
 		this.sexo = sexo;
 		this.chifre = chifre;
 	}
+	public Animal() {
+	}
 	
 	//metodos
 	
