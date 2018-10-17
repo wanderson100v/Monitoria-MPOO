@@ -1,5 +1,6 @@
 package view;
 
+import java.awt.Color;
 import java.awt.FlowLayout;
 
 import javax.swing.JButton;
@@ -18,6 +19,7 @@ public class LoginView extends JFrame {
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setSize(200,200);
 		setLayout(new FlowLayout());
+		getContentPane().setBackground(Color.cyan);
 		
 		//setResizable(false);
 		//setLocationRelativeTo(null);
@@ -38,10 +40,6 @@ public class LoginView extends JFrame {
 	}
 	
 	//metodos
-	public static void main(String[] args) {
-		new LoginView();
-	
-	}
 	
 	public JTextField getCampoLogin() {
 		return campoLogin;

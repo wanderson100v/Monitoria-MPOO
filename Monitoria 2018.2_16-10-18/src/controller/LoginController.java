@@ -11,10 +11,10 @@ import view.Mensagem;
 /**
  * Controller é responsavel por intermediar relações entre modelo e visão, e como a visão vai agir 
  * a determinada ação do usuario(eventos) 
- * @author ragnar
+ * @author Wanderson Pereira
  *
  */
-public class LoginController implements ActionListener {
+public class LoginController implements ActionListener{
 	private LoginModel loginModel;
 	private LoginView loginView;
 	
@@ -25,26 +25,28 @@ public class LoginController implements ActionListener {
 	// control()
 	public void control() {
 		loginView.getLogarButton().addActionListener(this);
+		
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		System.out.println("Apertei");
+	
 		String login = loginView.getCampoLogin().getText();
 		int senha = Integer.parseInt(loginView.getCampoSenha().getText());
 		Funcionario funcionario = new Funcionario(login,"default",senha);
-		
+
 		//metodo o qual vai tentar fazer o "login"
 		loginModel.capturarDados(funcionario);
+		
 		if(loginModel.funcionario != null) // significa ter logado no sistema
 			Mensagem.exibirMensagem("Login efetuado com sucesso","Sucesso");
 		else  // siginifica não ter logado
 			Mensagem.exibirMensagem("Login não efetuado com sucesso","Erro");
 		
-		// afim apenas de a todo tempo que clikar no botão login validar todos os usuários da base
-		loginModel.funcionario = null;
-		System.gc();
+		loginModel.deslogar();
+		
 		
 	}
 	
 }
+

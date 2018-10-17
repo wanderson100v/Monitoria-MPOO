@@ -5,6 +5,11 @@ import java.util.ArrayList;
 public class BaseDados {
 	private static ArrayList<Funcionario> funcionarios  = new ArrayList<Funcionario>();
 	
+	/**
+	 * Regra de negocio para inserção na base dada como exemplo
+	 * @param funcionario
+	 * @return true caso a quantidade de funcionarios seja menor que 10
+	 */
 	public static boolean addFuncionario(Funcionario funcionario) {
 		if(funcionarios.size() <10) {
 			funcionarios.add(funcionario);
