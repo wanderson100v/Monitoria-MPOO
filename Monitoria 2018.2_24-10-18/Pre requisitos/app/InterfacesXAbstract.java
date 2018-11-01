@@ -4,9 +4,8 @@ public class InterfacesXAbstract {
 	public static void main(String[] args) {
 		//Pessoa p = new Pessoa();
 		Pessoa p = new PessoaConcreta(); // polimorfismo de objeto
-		
+
 		IPessoa p2 = new IPessoa() { // a partir de interface
-			
 			@Override
 			public void fazTal() {
 				System.out.println("Estou fazendo...");
@@ -19,6 +18,8 @@ public class InterfacesXAbstract {
 				// TODO Auto-generated method stub
 			}
 		};
+		
+		
 	}
 }
 
@@ -32,19 +33,18 @@ abstract class Pessoa{
 	abstract void fazTal();
 }
 
-class PessoaConcreta extends Pessoa{
+class PessoaConcreta  extends Pessoa{
 
 	@Override
-	void fazTal() {
-		System.out.println("fazendo...");
+	public void fazTal() {
+		// TODO Auto-generated method stub
+		
 	}
-	
 }
 
 interface IPessoa{
 	
 	/*default void FalO(){
 	}*/
-	
 	void fazTal();
 }

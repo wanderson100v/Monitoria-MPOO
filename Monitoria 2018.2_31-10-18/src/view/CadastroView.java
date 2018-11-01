@@ -56,11 +56,33 @@ public class CadastroView extends JFrame {
 		setVisible(true);
 		
 	}
-	
-	public static void main(String[] args) {
-		new CadastroView();
+
+	public JTextField getNomeField() {
+		return nomeField;
 	}
-	
-	
+
+	public JTextField getEmailField() {
+		return emailField;
+	}
+
+	public JTextField getIdadeField() {
+		return idadeField;
+	}
+
+	public JTextField getEnderecoField() {
+		return enderecoField;
+	}
+
+	public JTextField getTelefoneField() {
+		return telefoneField;
+	}
+
+	public JButton getCadastrarButton() {
+		return cadastrarButton;
+	}
+
+	public JButton getSairButton() {
+		return sairButton;
+	}
 	
 }

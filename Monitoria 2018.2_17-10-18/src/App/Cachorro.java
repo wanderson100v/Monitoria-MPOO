@@ -11,12 +11,17 @@ public class Cachorro extends Animal {
 	}
 	
 	//sobre escrita
+	@Override
 	public void falar() {
 		System.out.println("Cachorro fala");
 	}
+	
 	//sobre carga
 	public void falar(String msg) {
 		System.out.println(msg);
+	}
+	public void falar(String msg,String titulo) {
+		System.out.println(titulo+": "+msg);
 	}
 	
 }
